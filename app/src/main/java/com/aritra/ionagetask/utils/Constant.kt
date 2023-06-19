@@ -1,4 +1,4 @@
-package com.aritra.ionagetask
+package com.aritra.ionagetask.utils
 
 class Constant {
 

@@ -1,6 +1,6 @@
 package com.aritra.ionagetask.api
 
-import com.aritra.ionagetask.Constant
+import com.aritra.ionagetask.utils.Constant
 import com.aritra.ionagetask.models.MovieDetails
 import com.aritra.ionagetask.models.ResultWrapper
 import retrofit2.Call
