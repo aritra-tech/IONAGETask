@@ -2,6 +2,7 @@ package com.aritra.ionagetask.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
@@ -45,9 +46,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Set action for the Floating Action Button
-        binding.fabSearch.setOnClickListener {
+        binding.searchBtn.setOnClickListener {
             // current search query
-            val query = binding.etQuery.text.toString()
+            val query = binding.etQuery.text.toString().trim()
             if (currentQuery != query) {
                 // If user entered new query reload results from start
                 currentPage = 0
@@ -67,13 +68,10 @@ class MainActivity : AppCompatActivity() {
             currentQuery = query
             currentPage += 1
             loadResults(query, currentPage)
+            binding.progressBar.visibility = View.GONE
         }
     }
 
-    /**
-     * @param query Query to search for
-     * @param page Page number
-     */
     private fun loadResults(query: String, page: Int) {
         // search movies
         client.searchMovies(query, page).enqueue(object : Callback<ResultWrapper> {
