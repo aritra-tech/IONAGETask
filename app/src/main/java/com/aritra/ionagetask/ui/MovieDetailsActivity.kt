@@ -14,7 +14,6 @@ import retrofit2.Response
 class MovieDetailsActivity : AppCompatActivity() {
 
     private val client = APIClient.getApiClient()
-    // Binding variable for Movie Details Activity
     private lateinit var binding: ActivityMovieDetailsBinding
 
     companion object {
@@ -27,17 +26,12 @@ class MovieDetailsActivity : AppCompatActivity() {
         binding = ActivityMovieDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Get imdb id from extras
         val imdbID = intent?.extras?.getString(IMDB_ID) ?: ""
 
-        // check if imdb id is not empty
         if (imdbID.isNotEmpty()) {
-            // fetch movie details by id
             client.getDetailsOfMovie(imdbID).enqueue(object : Callback<MovieDetails> {
                 override fun onResponse(call: Call<MovieDetails>, response: Response<MovieDetails>) {
                     response.body()?.let { details ->
-                        // details not null
-                        // apply details to activity
                         binding.apply {
                             txMovieTitle.text = details.title
                             txMovieActors.text = details.actors

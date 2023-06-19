@@ -14,4 +14,5 @@
     <string name="enter_the_movie_name">Enter the movie name</string>
     <string name="search_to_find_movie">Search to find movie</string>
     <string name="movie_details_app">Movie Details App</string>
+    <string name="search_for_movies">Search for movies</string>
 </resources>
