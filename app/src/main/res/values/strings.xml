@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ionageTask</string>
+    <string name="app_name">Movie Detials</string>
     <string name="no_result">No results for %s</string>
     <string name="page_end">Page End Reached!</string>
     <string name="movie_detials">Movie Detials</string>
