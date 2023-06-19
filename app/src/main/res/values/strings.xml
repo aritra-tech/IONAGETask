@@ -10,4 +10,7 @@
     <string name="director">Director</string>
     <string name="actors">Actors</string>
     <string name="plot">Plot</string>
+    <string name="movie_app">Movie App</string>
+    <string name="enter_the_movie_name">Enter the movie name</string>
+    <string name="search_to_find_movie">Search to find movie</string>
 </resources>
