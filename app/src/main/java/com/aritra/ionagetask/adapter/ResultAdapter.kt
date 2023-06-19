@@ -16,6 +16,7 @@ class ResultAdapter(private val results: ArrayList<SearchResult>) : RecyclerView
         fun bind(data: SearchResult) {
             Glide.with(binding.root).load(data.posterLink).into(binding.imgResult)
             binding.txResult.text = data.title
+            binding.txYear.text = data.year
             binding.root.setOnClickListener {
                 // start details activity using view context
                 val ctx = binding.root.context
